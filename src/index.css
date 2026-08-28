@@ -51,12 +51,38 @@ aside li:hover {
   background-color: #f0f0f0;
 }
 
-
 main {
   flex: 1;
-  padding: 20px;
+  padding: 30px;
 }
 
 main h2 {
   margin-top: 0;
+}
+
+.create-note {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.create-note input, .create-note textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.create-note textarea {
+  resize: vertical;
+}
+
+.create-note button {
+  width: fit-content;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
