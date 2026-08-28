@@ -1,6 +1,9 @@
-function NavItem({label}) {
+function NavItem({ label, view, selectedView, onViewChange }) {
     return (
-        <li>
+        <li
+            className={selectedView === view ? "active" : ""}
+            onClick={() => onViewChange(view)}
+        >
             {label}
         </li>
     );

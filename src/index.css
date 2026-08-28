@@ -111,3 +111,38 @@ main h2 {
   border-radius: 6px;
   cursor: pointer;
 }
+
+.note-card input,
+.note-card textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.note-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.archived-notes {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #dddddd;
+}
+
+aside li {
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 6px;
+}
+
+aside li:hover {
+  background-color: #f0f0f0;
+}
+
+aside li.active {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}

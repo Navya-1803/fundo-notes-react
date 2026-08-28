@@ -1,19 +1,26 @@
-import Header from "./components/Header/Header.jsx";
-import Sidebar from "./components/Sidebar/Sidebar.jsx";
-import MainContent from "./components/MainContent/MainContent.jsx";
+import { useState } from "react";
+import Header from "./components/Header/Header";
+import Sidebar from "./components/Sidebar/Sidebar";
+import MainContent from "./components/MainContent/MainContent";
 import "./App.css";
 
 function App() {
-  return (
-      <div className="app-container">
-        <Header />
+    const [selectedView, setSelectedView] = useState("notes");
 
-        <div className="app-body">
-          <Sidebar />
-          <MainContent />
+    return (
+        <div className="app-container">
+            <Header />
+
+            <div className="app-body">
+                <Sidebar
+                    selectedView={selectedView}
+                    onViewChange={setSelectedView}
+                />
+
+                <MainContent selectedView={selectedView} />
+            </div>
         </div>
-      </div>
-  );
+    );
 }
 
 export default App;

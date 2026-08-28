@@ -1,12 +1,29 @@
-import NavItem from './NavItem';
+import NavItem from "./NavItem";
 
-function Sidebar() {
-    return(
+function Sidebar({ selectedView, onViewChange }) {
+    return (
         <aside>
             <ul>
-                <NavItem label ="Notes" />
-                <NavItem label ="Archive" />
-                <NavItem label ="Trash" />
+                <NavItem
+                    label="Notes"
+                    view="notes"
+                    selectedView={selectedView}
+                    onViewChange={onViewChange}
+                />
+
+                <NavItem
+                    label="Archive"
+                    view="archive"
+                    selectedView={selectedView}
+                    onViewChange={onViewChange}
+                />
+
+                <NavItem
+                    label="Trash"
+                    view="trash"
+                    selectedView={selectedView}
+                    onViewChange={onViewChange}
+                />
             </ul>
         </aside>
     );
