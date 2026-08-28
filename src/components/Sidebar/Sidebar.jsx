@@ -4,9 +4,9 @@ function Sidebar() {
     return(
         <aside>
             <ul>
-                <li>Notes</li>
-                <li>Archive</li>
-                <li>Trash</li>
+                <NavItem label ="Notes" />
+                <NavItem label ="Archive" />
+                <NavItem label ="Trash" />
             </ul>
         </aside>
     );
