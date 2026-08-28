@@ -1,20 +1,44 @@
-function CreateNote() {
+import { useState } from "react";
+
+function CreateNote({ onAddNote }) {
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        if (title.trim() === "" && description.trim() === "") {
+            return;
+        }
+
+        onAddNote({
+            id: Date.now(),
+            title: title,
+            description: description,
+        });
+
+        setTitle("");
+        setDescription("");
+    }
+
     return (
-        <section className="create-note">
+        <form className="create-note" onSubmit={handleSubmit}>
             <input
                 type="text"
-                placeholder={"Title"}
+                placeholder="Title"
+                value={title}
+                onChange={(event) => setTitle(event.target.value)}
             />
 
-        <textarea
-            placeholder="Take a note..."
-            rows="5"
-        ></textarea>
+            <textarea
+                placeholder="Take a note..."
+                rows="5"
+                value={description}
+                onChange={(event) => setDescription(event.target.value)}
+            />
 
-        <button type="button">
-            Add Note
-        </button>
-        </section>
+            <button type="submit">Add Note</button>
+        </form>
     );
 }
 
