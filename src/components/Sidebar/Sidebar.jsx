@@ -1,4 +1,6 @@
-const Sidebar = () => {
+import NavItem from './NavItem';
+
+function Sidebar() {
     return(
         <aside>
             <ul>
@@ -8,6 +10,6 @@ const Sidebar = () => {
             </ul>
         </aside>
     );
-};
+}
 
 export default Sidebar;
