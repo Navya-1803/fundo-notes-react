@@ -1,148 +1,27 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
-
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-
-header {
-  border-bottom: 1px solid #ccc;
-  padding: 10px 20px;
-}
-
-header h1 {
-  margin: 0;
-}
-
-
-.app-body {
-  display: flex;
-  flex: 1;
-}
-
-
-aside {
-  width: 200px;
-  border-right: 1px solid #dddddd;
-  padding: 20px;
-}
-
-aside ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-aside li {
-  padding: 12px 16px;
-  margin-bottom: 8px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-aside li:hover {
-  background-color: #f0f0f0;
-}
-
-main {
-  flex: 1;
-  padding: 30px;
-}
-
-main h2 {
-  margin-top: 0;
-}
-
-.create-note {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-width: 600px;
-  margin-top: 20px;
-}
-
-.create-note input, .create-note textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font: inherit;
-}
-
-.create-note textarea {
-  resize: vertical;
-}
-
-.create-note button {
-  width: fit-content;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.notes-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-  margin-top: 24px;
-}
-
-.note-card {
-  padding: 16px;
-  border: 1px solid #dddddd;
-  border-radius: 8px;
-}
-
-.note-card h3 {
-  margin-top: 0;
-}
-
-.note-card button {
-  margin-top: 12px;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.note-card input,
-.note-card textarea {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
+* {
   box-sizing: border-box;
 }
 
-.note-actions {
-  display: flex;
-  gap: 8px;
-  margin-top: 12px;
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
 }
 
-.archived-notes {
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid #dddddd;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f9fa;
+  color: #202124;
 }
 
-aside li {
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
   cursor: pointer;
-  padding: 12px 16px;
-  border-radius: 6px;
-}
-
-aside li:hover {
-  background-color: #f0f0f0;
-}
-
-aside li.active {
-  background-color: #e0e0e0;
-  font-weight: bold;
 }

@@ -18,12 +18,12 @@ function Sidebar({ selectedView, onViewChange }) {
                     onViewChange={onViewChange}
                 />
 
-                <NavItem
+                {/*<NavItem
                     label="Trash"
                     view="trash"
                     selectedView={selectedView}
                     onViewChange={onViewChange}
-                />
+                />*/}
             </ul>
         </aside>
     );

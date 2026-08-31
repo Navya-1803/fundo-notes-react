@@ -194,12 +194,12 @@ function MainContent({ selectedView }) {
         );
     }
 
-    return (
+    /*return (
         <main>
             <h2>Trash</h2>
             <p>Trash functionality will be added later.</p>
         </main>
-    );
+    );*/
 }
 
 export default MainContent;
